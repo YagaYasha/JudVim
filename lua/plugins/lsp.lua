@@ -1,11 +1,11 @@
 return
 {
     "neovim/nvim-lspconfig",
-    event = "VeryLazy",
     dependencies = {
         "nvim-lua/plenary.nvim"
+        event = "VeryLazy"
     },
     config = function()
-        require'lspconfig'.lua_ls.setup({})
+        require'lspconfig'.lua_ls.setup({ autostart = true })
     end
 }
