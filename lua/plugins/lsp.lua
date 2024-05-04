@@ -22,6 +22,24 @@ return
     event = "VeryLazy",
     
     config = function()
+
+        require'lspconfig'.gopls.setup({
+            capabilities = capabilities,
+            on_attach = on_attach,
+            settings = {
+                gopls = {
+			        hints = {
+				        assignVariableTypes = true,
+				        compositeLiteralFields = true,
+				        compositeLiteralTypes = true,
+				        constantValues = true,
+				        functionTypeParameters = true,
+				        parameterNames = true,
+				        rangeVariableTypes = true,
+			        },
+                },
+            }
+        })
         require'lspconfig'.lua_ls.setup({
             
             capabilities = capabilities,
