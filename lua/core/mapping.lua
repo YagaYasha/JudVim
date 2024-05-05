@@ -11,6 +11,8 @@ map('n','<S-t>',':NvimTreeToggle<cr>')
 --Save/Save-Quit
 map('n','<C-s>',':w!<cr>')
 map('n','<C-q>',':wq!<cr>')
+
+--Line Navigation
 map({ 'n', 'x' }, '<S-h>', '^')
 map({ 'n', 'x' }, 'L', 'g_')
 
