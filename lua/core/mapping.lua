@@ -3,10 +3,11 @@ local map = vim.keymap.set
 vim.g.mapleader = ' '
 
 --Close Window
-map('n','q',':close<cr>')
+map('n','q',':close<CR>')
 
 --NvimTreeToggle
-map('n','<S-t>',':NvimTreeToggle<cr>')
+map('n','<S-t>',':NvimTreeToggle<CR>')
+map('n', '<S-u>', ":NvimTreeClose<CR>")
 
 --Save/Save-Quit
 map('n','<C-s>',':w!<cr>')
