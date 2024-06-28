@@ -1,6 +1,6 @@
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
-local on_attach = function(client, budfnr)
+local on_attach = function(client, bufnr) 
         local map = function(mode, key, action)
             vim.keymap.set(mode, key, action, { buffer = bufnr, 
             silent = true, 
@@ -19,7 +19,7 @@ end
 return 
 {
     "neovim/nvim-lspconfig",
-    event = "VeryLazy",
+    event = "VimEnter",
     
     config = function()
 
