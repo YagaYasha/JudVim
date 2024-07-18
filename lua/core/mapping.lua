@@ -6,8 +6,8 @@ vim.g.mapleader = ' '
 map('n','q',':close<CR>')
 
 --NvimTreeToggle
-map('n','<S-t>',':NvimTreeToggle<CR>')
-
+map('n','<S-t>',':NvimTreeToggle<CR>', { silent = true})
+map( 'n', '<S-r>', ':NvimTreeFocus<CR>', { silent = true})
 --Save/Save-Quit
 map('n','<C-s>',':w!<cr>')
 map('n','<C-q>',':wq!<cr>')

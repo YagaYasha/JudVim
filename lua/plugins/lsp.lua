@@ -1,10 +1,10 @@
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
-local on_attach = function(client, bufnr) 
+local on_attach = function(client, bufnr)
         local map = function(mode, key, action)
-            vim.keymap.set(mode, key, action, { buffer = bufnr, 
-            silent = true, 
-            noremap = true 
+            vim.keymap.set(mode, key, action, { buffer = bufnr,
+            silent = true,
+            noremap = true
         })
         end
         map("n", "K", ":Lspsaga hover _doc<CR>")
@@ -16,11 +16,11 @@ local on_attach = function(client, bufnr)
         map("n", "<leader>rn", ":Lspsaga rename<CR>")
 end
 
-return 
+return
 {
     "neovim/nvim-lspconfig",
     event = "VimEnter",
-    
+
     config = function()
 
         require'lspconfig'.gopls.setup({
@@ -41,7 +41,7 @@ return
             }
         })
         require'lspconfig'.lua_ls.setup({
-            
+
             capabilities = capabilities,
             on_attach = on_attach,
             settings = {

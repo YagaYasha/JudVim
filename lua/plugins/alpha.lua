@@ -9,29 +9,13 @@ return {
       return "Alpha has an error"
     end
 
-    local header = {
-      type = "text",
-      val =
-[[ ________  ___   ______            ___  _______  ___  ___ ]],
-[[|  ____  ||_  | |____  |          |_  ||____   ||_  ||_  |]],
-[[| |   | |  |_|      | |   _____    | |     | |   | |  |_| ]],
-[[| |___| |      _____| |_ |_____|   | |     | |   | |      ]],
-[[|_______|     /________/           | |     |_|   |_|      ]],
-[[                                   |_|                    ]],
-
-      opts = {
-        position = "center",
-        hl = "Function",
-      },
-    }
-
     local function button(sc, txt, keybind)
       local sc_ = sc:gsub("%s", ""):gsub("SPC", "<leader>")
       local opts = {
         position = "center",
         text = txt,
         shortcut = sc,
-        cursor = 3,
+        cursor = 40,
         width = 40,
         align_shortcut = "right",
         hl_shortcut = "Number",
@@ -64,7 +48,6 @@ return {
     }
 
     local section = {
-      header = header,
       buttons = buttons,
     }
 
