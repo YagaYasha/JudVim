@@ -1,20 +1,13 @@
+-- Keymaps are automatically loaded on the VeryLazy event
+-- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
+-- Add any additional keymaps here
+--
 local map = vim.keymap.set
-
-vim.g.mapleader = ' '
-
---Close Window
-map('n','q',':close<CR>')
-
---NvimTreeToggle
-map('n','<S-t>',':NvimTreeToggle<CR>', { silent = true})
-map( 'n', '<S-r>', ':NvimTreeFocus<CR>', { silent = true})
 --Save/Save-Quit
-map('n','<C-s>',':w!<cr>')
-map('n','<C-q>',':wq!<cr>')
 
 --Line Navigation
-map({ 'n', 'x' }, '<S-h>', '^')
-map({ 'n', 'x' }, 'L', 'g_')
+map({ "n", "x" }, "<S-h>", "^")
+map({ "n", "x" }, "L", "g_")
 
 --Tubzik
 map("n", "<Tab>", ":BufferLineCycleNext<CR>", { silent = true })
