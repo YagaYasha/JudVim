@@ -1,10 +1,10 @@
 return {
-  { "projekt0n/github-nvim-theme" },
+  { "craftzdog/solarized-osaka.nvim" },
 
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "github_dark_high_contrast",
+      colorscheme = "solarized-osaka",
     },
   },
 }
